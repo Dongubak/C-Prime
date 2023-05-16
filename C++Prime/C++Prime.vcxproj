@@ -139,6 +139,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="10-2-1.cpp" />
     <ClCompile Include="10-2.cpp" />
     <ClCompile Include="2-1.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
@@ -450,6 +451,7 @@
     <ClInclude Include="coordin.h" />
     <ClInclude Include="fdsjlfdas.h" />
     <ClInclude Include="golf.h" />
+    <ClInclude Include="10-2.h" />
     <ClInclude Include="sample.h" />
     <ClInclude Include="stack.h" />
     <ClInclude Include="stock00.h" />
