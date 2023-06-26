@@ -1,30 +1,37 @@
 #include <iostream>
+#pragma warning(disable: 4996)
 
-class Ik {
+class Player {
 private:
-  int fuss;
+  int m_score;
 
 public:
-  Ik(int f = 9) { 
-    fuss = f;
-  };
+  Player(int inputScore = 0) {
+    m_score = inputScore;
+  }
 
-  void ViewIk() const;
+  Player compareScore(Player &playerReference) const {
+    if (this->m_score > playerReference.m_score) {
+      return *this;
+    }
+    else {
+      return playerReference;
+    }
+  }
+
+  void getInfo(void) const {
+    std::cout << "score : " << m_score;
+  }
 };
-
-void Ik::ViewIk() const{
-  std::cout << fuss << std::endl;
-}
 
 int main(void) {
 
-  using namespace std;
+  Player a{ 10 };
+  Player b{ 20 };
 
-  Ik* pik = new Ik; // call default constructor
-  Ik ee = Ik(8);
-  ee.ViewIk();
-  pik->ViewIk();
+  Player mvpPlayer = a.compareScore(b);
 
+  mvpPlayer.getInfo();
 
   return 0;
 }
