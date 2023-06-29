@@ -1,23 +1,26 @@
-#ifndef STOCK00_H_
-#define STOCK00_H_
+#ifndef MYTIME3_H_
+#define MYTIME3_H_
 
-#include <string>
+#include <iostream>
 
-class Stock {
+class Time {
 private:
-  std::string company;
-  long shares;
-  double share_val;
-  double total_val;
-  ///definition in class -> default inline method
-  void set_tot();
+  int hours;
+  int minutes;
 
 public:
-  void acquire(const std::string& co, long n, double pr);
-  void buy(long num, double price);
-  void sell(long num, double price);
-  void update(double price);
-  void show();
+  Time();
+  Time(int h, int m = 0);
+  void AddMin(int m);
+  void AddHr(int h);
+  void Reset(int h = 0, int m = 0);
+  Time operator+(const Time& t) const;
+  Time operator-(const Time& t) const;
+  Time operator*(double n) const;
+  friend Time operator*(double m, const Time& t) {
+    return t * m;
+  }
+  friend std::ostream& operator<<(std::ostream& os, const Time& t);
 };
 
-#endif // !STOCK00_H_
+#endif // !MYTIME3_H_

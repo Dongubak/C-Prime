@@ -210,7 +210,7 @@
     <ClCompile Include="9-1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main2.cpp">
+    <ClCompile Include="main-1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="9-1-golf.cpp">
@@ -300,6 +300,12 @@
     <ClCompile Include="11-1-1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vector-1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="6-5.h">
@@ -363,6 +369,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vector.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
