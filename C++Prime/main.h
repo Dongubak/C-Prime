@@ -2,6 +2,7 @@
 #define MYTIME3_H_
 
 #include <iostream>
+#include "11-4.h"
 
 class Time {
 private:
@@ -19,6 +20,10 @@ public:
   Time operator*(double n) const;
   friend Time operator*(double m, const Time& t) {
     return t * m;
+  }
+  inline std::ostream& operator<<(std::ostream& osRef, const Time& timeRef)
+  {
+      // TODO: insert return statement here
   }
   friend std::ostream& operator<<(std::ostream& os, const Time& t);
 };

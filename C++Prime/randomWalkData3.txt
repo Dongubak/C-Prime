@@ -1,0 +1,4 @@
+target distance : 100, step length : 10
+highest steps for 100 trial : 503
+lowest steps for 100 trial : 25
+average steps for 100 trial : 119
