@@ -12,7 +12,7 @@ int main(void) {
     Stock("Fleep Enterprises", 60, 6.5),
   };
 
-  std::cout << "º¸À¯ ÁÖ½Ä ¸®½ºÆ® : \n";
+  std::cout << "ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ® : \n";
   int st;
   for (st = 0; st < STKS; st++) {
     /*stocks[st].show();*/
@@ -23,7 +23,7 @@ int main(void) {
     top = &top->topval(stocks[st]);
   }
 
-  std::cout << "\nÃÖ°í °¡Ä¡ÀÇ ÁÖ½Ä : \n";
+  std::cout << "\nï¿½Ö°ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½Ö½ï¿½ : \n";
   /*top->show();*/
   std::cout << *top;
 

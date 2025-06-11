@@ -15,7 +15,7 @@ Stock::Stock(const char* co, long n, double pr) {
   strcpy(company, co);
 
   if (n < 0) {
-    std::cout << "ÁÖ½Ä ¼ö´Â À½¼ö°¡ µÉ ¼ö ¾øÀ¸¹Ç·Î, " << company << " shares¸¦ 0À¸·Î ¼³Á¤ÇÕ´Ï´Ù.\n";
+    std::cout << "ï¿½Ö½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½, " << company << " sharesï¿½ï¿½ 0ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.\n";
     shares = 0;
   }
   else {
@@ -29,7 +29,7 @@ Stock::~Stock() {
 }
 void Stock::buy(long num, double price) {
   if (num < 0) {
-    std::cout << "¸ÅÀÔ ÁÖ½Ä ¼ö´Â À½¼ö°¡ µÉ ¼ö ¾øÀ¸¹Ç·Î, " << "°Å·¡°¡ Ãë¼ÒµÇ¾ú½À´Ï´Ù.\n";
+    std::cout << "ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½, " << "ï¿½Å·ï¿½ï¿½ï¿½ ï¿½ï¿½ÒµÇ¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.\n";
   }
   else {
     shares += num;
@@ -40,10 +40,10 @@ void Stock::buy(long num, double price) {
 void Stock::sell(long num, double price) {
   using std::cout;
   if (num < 0) {
-    cout << "¸Åµµ ÁÖ½Ä ¼ö´Â À½¼ö°¡ µÉ ¼ö ¾øÀ¸¹Ç·Î, " << "°Å·¡°¡ Ãë¼ÒµÇ¾ú½À´Ï´Ù.\n";
+    cout << "ï¿½Åµï¿½ ï¿½Ö½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½, " << "ï¿½Å·ï¿½ï¿½ï¿½ ï¿½ï¿½ÒµÇ¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.\n";
   }
   else if (num > shares) {
-    cout << "º¸À¯ ÁÖ½Äº¸´Ù ¸¹Àº ÁÖ½ÄÀ» ¸ÅµµÇÒ ¼ö ¾øÀ¸¹Ç·Î, " << "°Å·¡°¡ Ãë¼ÒµÇ¾ú½À´Ï´Ù.\n";
+    cout << "ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½Äºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½ï¿½ ï¿½Åµï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½, " << "ï¿½Å·ï¿½ï¿½ï¿½ ï¿½ï¿½ÒµÇ¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.\n";
   }
   else {
     shares -= num;
@@ -63,12 +63,12 @@ void Stock::show() const {
   ios_base::fmtflags orig = cout.setf(ios_base::fixed, ios_base::floatfield);
   std::streamsize prec = cout.precision(3);
 
-  cout << "È¸»ç¸í : " << company
-    << "ÁÖ½Ä ¼ö : " << shares << '\n';
+  cout << "È¸ï¿½ï¿½ï¿½ : " << company
+    << "ï¿½Ö½ï¿½ ï¿½ï¿½ : " << shares << '\n';
 
-  cout << "ÁÖ°¡ : " << share_val;
+  cout << "ï¿½Ö°ï¿½ : " << share_val;
   cout.precision(2);
-  cout << " ÁÖ½Ä ÃÑ °¡Ä¡ : $" << total_val << '\n';
+  cout << " ï¿½Ö½ï¿½ ï¿½ï¿½ ï¿½ï¿½Ä¡ : $" << total_val << '\n';
 
   cout.setf(orig, ios_base::floatfield);
   cout.precision(prec);
@@ -88,12 +88,12 @@ std::ostream& operator<<(std::ostream& osRef, const Stock& stockRef) {
   ios_base::fmtflags orig = osRef.setf(ios_base::fixed, ios_base::floatfield);
   std::streamsize prec = osRef.precision(3);
 
-  osRef << "È¸»ç¸í : " << stockRef.company
-    << "ÁÖ½Ä ¼ö : " << stockRef.shares << '\n';
+  osRef << "È¸ï¿½ï¿½ï¿½ : " << stockRef.company
+    << "ï¿½Ö½ï¿½ ï¿½ï¿½ : " << stockRef.shares << '\n';
 
-  osRef << "ÁÖ°¡ : " << stockRef.share_val;
+  osRef << "ï¿½Ö°ï¿½ : " << stockRef.share_val;
   osRef.precision(2);
-  osRef << " ÁÖ½Ä ÃÑ °¡Ä¡ : $" << stockRef.total_val << '\n';
+  osRef << " ï¿½Ö½ï¿½ ï¿½ï¿½ ï¿½ï¿½Ä¡ : $" << stockRef.total_val << '\n';
 
   osRef.setf(orig, ios_base::floatfield);
   osRef.precision(prec);
